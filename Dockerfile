@@ -20,5 +20,6 @@ ADD hubot/node_modules/hubot-jenkins-enhanced/src/jenkins-enhanced.coffee hubot/
 
 ADD hubot/hubot-scripts.json /hubot/
 ADD hubot/external-scripts.json /hubot/
+ADD scripts /hubot/scripts
 
 ENTRYPOINT ["./bin/hubot"]
