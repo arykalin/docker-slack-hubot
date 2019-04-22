@@ -84,7 +84,7 @@ module.exports = (robot) ->
         attachments = [ { "color": "#1093E8", "text": message, "title": "Jenkins » " + extraData.FOLDER_NAME[0].toUpperCase() + extraData.FOLDER_NAME[1..-1], "title_link": extraData.FOLDER_URL, "footer": userName, "footer_icon": "https://png.icons8.com/color/1600/jenkins.png", "ts": ts }]
       else
         attachments = [ { "color": "#1093E8", "text": message, "title": "Jenkins » Global", "title_link": extraData.JENKINS_URL, "footer": userName, "footer_icon": "https://png.icons8.com/color/1600/jenkins.png", "ts": ts }]
-    # else for all other cases like BUILD/SEND/APPROVE
+# else for all other cases like BUILD/SEND/APPROVE
     else
       if status == 'FAILURE'
         color = 'danger'
