@@ -15,6 +15,9 @@ RUN \
     hubot-slack
 RUN npm install --save --production --silent \
         hubot-jenkins-enhanced
+#patching issue https://github.com/codeandfury/hubot-jenkins-enhanced/issues/23
+ADD hubot/node_modules/hubot-jenkins-enhanced/src/jenkins-enhanced.coffee hubot/node_modules/hubot-jenkins-enhanced/src/
+
 ADD hubot/hubot-scripts.json /hubot/
 ADD hubot/external-scripts.json /hubot/
 
