@@ -13,7 +13,8 @@ RUN \
   sed -i '/npm install/d' bin/hubot && \
   npm install --save --production --silent \
     hubot-slack
-
+RUN npm install --save --production --silent \
+        hubot-jenkins-enhanced
 ADD hubot/hubot-scripts.json /hubot/
 ADD hubot/external-scripts.json /hubot/
 
