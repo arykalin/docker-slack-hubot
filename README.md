@@ -31,7 +31,8 @@ services:
       - redis:/data
   hubot:
     image: dockhubot
-    ports: 1080:8080
+    ports: 
+      - 1080:8080
     command: -a slack
     depends_on:
       - redis
